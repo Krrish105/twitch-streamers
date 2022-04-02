@@ -42,6 +42,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- JQuery
 - [Twitch API](https://dev.twitch.tv/docs/api/)
 
 ## Author
