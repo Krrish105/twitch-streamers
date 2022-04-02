@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Twitch Streamers</title>
+</head>
+<body>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Header -->
+        <header>
+            <h1>
+                Twitch Streamers
+            </h1>
+            <select name="users-status" id="users-status">
+                <option value="All" selected>All</option>
+                <option value="Online">Online</option>
+                <option value="Offline">Offline</option>
+            </select>
+        </header>
+
+        <!-- Will contain all the users -->
+        <div id="display"></div>
+        
+    </main>
+
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

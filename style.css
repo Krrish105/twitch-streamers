@@ -1,0 +1,128 @@
+ /* Font */
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
+
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Body */
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+}
+
+/* Main */
+main{
+    width: 100%;
+    height: fit-content;
+    margin: 50px auto;
+    min-width: 300px;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(241, 179, 179);
+}
+
+/* Heading */
+h1{
+    font-size: 1rem;
+}
+
+/* Row */
+.row{
+    margin: 10px 0;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+}
+/* User Image */
+.user-img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+/* User Name */
+.name{
+    font-weight: 500;
+    font-size: 1.3rem;
+    box-shadow: 0 1px black;
+    padding-bottom: 3px;
+    cursor: pointer;
+    color: black;
+    width: fit-content;
+    margin: 0 auto;
+}
+.name:hover{
+    color: rgb(88, 86, 86);
+    box-shadow: 0 2.5px rgb(88, 86, 86);
+}
+/* User Status */
+.status{
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+.online{
+    background-color: rgb(233, 243, 221);
+}
+.offline{
+    background-color: rgb(205, 218, 229);
+}
+.hidden{
+    display: none;
+}
+
+/* Media queries */
+@media (min-width: 500px) {
+    h1{
+        font-size: 2rem;
+    }
+    main{
+        width: fit-content;
+        margin: 50px auto;
+    }
+    header{
+        gap: 10vw;
+        padding: 20px 30px;
+    }
+    .user-img{
+        grid-area: img;
+        margin: 0;
+    }
+    .name{
+        grid-area: name;
+        margin-left: 40px;
+    }
+    .status{
+        grid-area: status;
+        /* width: 300px; */
+        width: 450px;
+        max-width: 450px;
+    }
+    .row{
+        grid-template-areas: "img name . status";
+        justify-content: flex-start;
+        grid-template-rows: auto;
+    }
+}
